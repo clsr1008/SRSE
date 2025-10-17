@@ -1,0 +1,22 @@
+python uda_benchmark.py   --run_description Teacher_CNN \
+                --da_method DANN \
+                --dataset HAR \
+                --backbone CNN_T \
+                --num_runs 3 \
+
+python uda_benchmark.py  --experiment_description HAR   --run_description Teacher_CNN   --da_method DANN   --dataset HAR   --backbone CNN_T  --num_runs 1
+python uda_benchmark.py  --experiment_description HAR   --run_description DDC_CNN   --da_method DDC   --dataset HAR   --backbone CNN  --num_runs 3 
+python uda_benchmark.py  --experiment_description HAR   --run_description MMDA_CNN   --da_method MMDA   --dataset HAR   --backbone CNN  --num_runs 3
+
+python jku_mobileda_aad.py  --experiment_description HAR   --run_description JointUKD_CNN    --da_method JointUKD    --dataset HAR  --backbone CNN  --num_runs 3 
+
+python proposed_uda_kd.py  --experiment_description HAR  --run_description JKD-CNN   --da_method UDA_KD  --dataset HAR  --backbone CNN  --num_runs 3
+
+多任务：python proposed_uda_kd.py  --experiment_description TJU  --run_description JKD-CNN   --da_method UDA_KD  --dataset TJU  --backbone CNN  --num_runs 3
+单任务：python proposed_uda_kd.py  --experiment_description TJU  --run_description JKD-CNN   --da_method UDA_KDS  --dataset TJU  --backbone CNN  --num_runs 3
+
+多任务：python proposed_uda_kd.py  --experiment_description XJTU  --run_description JKD-CNN   --da_method UDA_KD  --dataset XJTU  --backbone CNN  --num_runs 3
+单任务：python proposed_uda_kd.py  --experiment_description XJTU  --run_description JKD-CNN   --da_method UDA_KDS  --dataset XJTU  --backbone CNN  --num_runs 3
+
+多任务：python proposed_uda_kd.py  --experiment_description SANDIA  --run_description JKD-CNN   --da_method UDA_KD  --dataset SANDIA  --backbone CNN  --num_runs 3
+单任务：python proposed_uda_kd.py  --experiment_description SANDIA  --run_description JKD-CNN   --da_method UDA_KDS  --dataset SANDIA  --backbone CNN  --num_runs 3
